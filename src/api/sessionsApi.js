@@ -41,8 +41,8 @@ class SessionApi {
   }
 
   /* Get all projects */
-  static async getProjects(id) {
-    let res = await this.request("projects", { id });
+  static async getProjects(title) {
+    let res = await this.request("projects", { title });
     return res.projects;
   }
 
