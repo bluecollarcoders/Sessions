@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import SessionApi from "../api/sessionsApi";
 import Alert from "../common/Alert";
 
 function LoginForm({ login }) {
@@ -24,11 +25,12 @@ function LoginForm({ login }) {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let result = await login(formData);
-    if (result.sucess) {
-      history.push("/projectspost");
+    let token = await SessionApi.login(formData);
+    if (token) {
+      SessionApi.token = token;
+      // history.push("/projectspost");
     } else {
-      setformErrors(result.errors);
+      setformErrors([`unable to login`]);
     }
   }
 

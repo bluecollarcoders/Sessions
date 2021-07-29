@@ -36,8 +36,8 @@ class SessionApi {
   }
 
   /* Post projects */
-  static async postProjects(id) {
-    await this.request(`projects/${id}`, {}, "post");
+  static async postProjects() {
+    await this.request("projects", {}, "post");
   }
 
   /* Get all projects */
