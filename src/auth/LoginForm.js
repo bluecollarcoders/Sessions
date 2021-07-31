@@ -28,7 +28,7 @@ function LoginForm({ login }) {
     let token = await SessionApi.login(formData);
     if (token) {
       SessionApi.token = token;
-      // history.push("/projectspost");
+      history.push("/projectspost");
     } else {
       setformErrors([`unable to login`]);
     }

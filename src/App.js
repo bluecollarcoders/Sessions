@@ -8,7 +8,7 @@ import ProjectPost from "./components/ProjectPost";
 
 const App = () => {
   return (
-    <ProjectPost />
+    <ProjectList />
 
     // <BrowserRouter>
     //   <UserContext.Provider>

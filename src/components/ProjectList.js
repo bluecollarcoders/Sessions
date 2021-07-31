@@ -48,7 +48,9 @@ const ProjectList = () => {
                     <td>{project.title}</td>
                     <td>{project.project_name}</td>
                     <td>{project.project_description}</td>
-                    <td>{project.music_link}</td>
+                    <td>
+                      <a href={project.music_link}>{project.music_link}</a>
+                    </td>
                     <button onClick={(e) => handleUpdate(e, project.id)}>
                       Update
                     </button>

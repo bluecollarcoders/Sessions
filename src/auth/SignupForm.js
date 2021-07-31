@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import SessionApi from "../api/sessionsApi";
 import Alert from "../common/Alert";
 
 function SignupForm({ signup }) {
@@ -27,11 +28,12 @@ function SignupForm({ signup }) {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let result = await signup(formData);
-    if (result.sucess) {
+    let token = await SessionApi.signup(formData);
+    if (token) {
+      SessionApi.token = token;
       history.push("/projectspost");
     } else {
-      setFormErrors(result.errors);
+      setformErrors([`unable to register`]);
     }
   }
 

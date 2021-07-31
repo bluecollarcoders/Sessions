@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import SessionApi from "../api/sessionsApi";
-import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
+import {
+  Col,
+  Row,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Card,
+} from "reactstrap";
 
 function ProjectPost() {
   const history = useHistory();
@@ -35,56 +44,87 @@ function ProjectPost() {
     }
   };
   return (
-    <div className="PostForm">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="Title">Title</label>
-        <input
-          id="Title"
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-          type="text"
-          className="form-control"
-          placeholder="Title"
-        />
-        <label htmlFor="ProjectName">ProjectName</label>
-        <input
-          id="projectName"
-          name="projectName"
-          value={formData.projectName}
-          onChange={handleChange}
-          type="text"
-          className="form-control"
-          placeholder="projectName"
-        />
-        <label htmlFor="projectDescription">Project Description</label>
-        <input
-          id="projectDescription"
-          name="projectDescription"
-          value={formData.projectDescription}
-          onChange={handleChange}
-          type="text"
-          className="form-control"
-          placeholder="projectDescription"
-        />
-        <label htmlFor="musicLink">Music Link</label>
-        <input
-          id="musicLink"
-          name="musicLink"
-          value={formData.musicLink}
-          onChange={handleChange}
-          type="text"
-          className="form-control"
-          placeholder="musicLink"
-        />
-        <button
-          onClick={handleSubmit}
-          type="submit"
-          className="btn btn-primary"
-        >
-          Add
-        </button>
-      </form>
+    <div className="container col-md-10 offset-md-3 col-lg-4 offset-lg-4">
+      <h3 className="mb-3" style={{ paddingTop: "2rem", alignItems: "center" }}>
+        Project Post Form
+      </h3>
+
+      <Card style={{ padding: "20px", paddingRight: "15px" }}>
+        <div className="card-body">
+          <Form onSubmit={handleSubmit}>
+            <Row form>
+              <Col md={6}>
+                <FormGroup>
+                  <Label htmlFor="Title">Title</Label>
+                  <Input
+                    id="Title"
+                    name="title"
+                    value={formData.title}
+                    onChange={handleChange}
+                    type="text"
+                    className="form-control"
+                    placeholder="Title"
+                  />
+                </FormGroup>
+              </Col>
+
+              <Col md={6}>
+                <FormGroup>
+                  <Label htmlFor="ProjectName">ProjectName</Label>
+                  <Input
+                    id="projectName"
+                    name="projectName"
+                    value={formData.projectName}
+                    onChange={handleChange}
+                    type="text"
+                    className="form-control"
+                    placeholder="projectName"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+
+            <Col md={6}>
+              <FormGroup>
+                <Label htmlFor="projectDescription">Project Description</Label>
+                <Input
+                  id="projectDescription"
+                  name="projectDescription"
+                  value={formData.projectDescription}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  placeholder="projectDescription"
+                />
+              </FormGroup>
+            </Col>
+
+            <Col md={6}>
+              <FormGroup>
+                <Label htmlFor="musicLink">Music Link</Label>
+                <Input
+                  id="musicLink"
+                  name="musicLink"
+                  value={formData.musicLink}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  placeholder="musicLink"
+                />
+              </FormGroup>
+            </Col>
+
+            <Button
+              onClick={handleSubmit}
+              type="submit"
+              className="btn btn-primary"
+              style={{ marginTop: "10px" }}
+            >
+              Add
+            </Button>
+          </Form>
+        </div>
+      </Card>
     </div>
   );
 }
