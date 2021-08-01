@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SessionApi from "../api/sessionsApi";
 import { useHistory } from "react-router-dom";
+import { Table } from "reactstrap";
 
 /* list of projects pulled from backend */
 
@@ -20,14 +21,14 @@ const ProjectList = () => {
     history.push(`/projects/${id}`);
   };
 
-  const handleUpdate = (e, id) => {
-    e.stopPropagation();
-    history.push(`/projects/${id}/update`);
-  };
+  // const handleUpdate = (e, id) => {
+  //   e.stopPropagation();
+  //   history.push(`/projects/${id}/update`);
+  // };
   return (
     <div className="container">
       <div className="list-group">
-        <table className="table table-hover table-dark">
+        <Table className=" table-hover">
           <thead>
             <tr className="bg-primary">
               <th scope="col">Title</th>
@@ -51,14 +52,14 @@ const ProjectList = () => {
                     <td>
                       <a href={project.music_link}>{project.music_link}</a>
                     </td>
-                    <button onClick={(e) => handleUpdate(e, project.id)}>
+                    {/* <button onClick={(e) => handleUpdate(e, project.id)}>
                       Update
-                    </button>
+                    </button> */}
                   </tr>
                 );
               })}
           </tbody>
-        </table>
+        </Table>
       </div>
     </div>
   );

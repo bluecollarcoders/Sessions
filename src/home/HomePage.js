@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../auth/UserContext";
 
 const HomePage = () => {
+  const { currentUser } = useContext(UserContext);
+  console.debug("Homepage", "currentUser=", currentUser);
   return (
     <div>
       <header>
@@ -9,11 +12,24 @@ const HomePage = () => {
           <div className="containers">
             <div className="showcase-content">
               <h1>
-                <span className="text-primary">GETTING</span> THE RIGHT SOUND IS
-                JUST A CLICK AWAY
+                <span className="text-primarys">GETTING</span> THE RIGHT SOUND
+                IS JUST A CLICK AWAY
               </h1>
               <p className="leads">QUALITY TALENT FOR INDIE ARTIST</p>
-              <button className="btn btn-dark ">POST PROJECT</button>
+              {currentUser ? (
+                <h2>
+                  Welcom Back, {currentUser.firstname || currentUser.name}
+                </h2>
+              ) : (
+                <p>
+                  <Link className="btn btn-dark" to="/login">
+                    Log in
+                  </Link>
+                  <Link className="btn btn-dark" to="/signup">
+                    POST PROJECT
+                  </Link>
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -23,7 +39,7 @@ const HomePage = () => {
         <div className="info-img" />
         <div className="info-content">
           <h2>
-            <span className="text-primary">VIEW</span> PROJECTS
+            <span className="text-primarys">VIEW</span> PROJECTS
           </h2>
           <p>
             Producers find an artist whose project you can contribute too.
