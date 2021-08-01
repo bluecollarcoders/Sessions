@@ -5,10 +5,11 @@ import LoginForm from "./auth/LoginForm";
 import { UserContext } from "./auth/UserContext";
 import ProjectList from "./components/ProjectList";
 import ProjectPost from "./components/ProjectPost";
+import HomePage from "./home/HomePage";
 
 const App = () => {
   return (
-    <ProjectList />
+    <HomePage />
 
     // <BrowserRouter>
     //   <UserContext.Provider>

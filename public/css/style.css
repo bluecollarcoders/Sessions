@@ -1,0 +1,318 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utlity Classes [container ] */
+.containers {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.text-primary {
+    color: #f7c08a;
+    padding: 10px;
+}
+
+.leads {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #333;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 9%;
+    cursor: pointer;
+}
+
+.btn:hover {
+  background: #f7c08a;
+  color: #333;
+}
+
+.btn-light {
+    background: #f7c08a;
+    color: #fff;
+}
+
+
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-dark {
+    background: #fff;
+    color: #333;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color:#333;
+}
+
+.bg-primary {
+    background: #f7c08a;
+    color: #333;
+}
+
+.clr {
+    clear: both;
+
+}
+
+.l-heading {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+/* Padding */
+
+.py-1 {padding: 10px 0;}
+.py-2 {padding: 20px 0;}
+.py-3 {padding: 30px 0;}
+
+/* Main Styling */
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Navbar */
+#navbar {
+    background: #333;
+    color: #fff;
+    overflow: auto;
+}
+
+#navbar a {
+    color: #fff;
+}
+
+#navbar h1{
+    float: left;
+    padding-top: 20px;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    background: #444;
+    color: #f7c08a;
+}
+
+/* Showcase */
+
+#showcase {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)), url('/images/pexels-brett-sayles-4001264.jpg') no-repeat
+    center center/cover;
+    height: 800px;
+    opacity: 0.9;
+}
+
+#showcase .showcase-content {
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1 {
+    font-size: 60px;
+    line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+   padding-bottom: 20px;
+   line-height: 1.7em;
+}
+
+/* Home Info */
+
+#home-info {
+    height: 400px;
+}
+
+#home-info .info-img {
+    float: left;
+    width: 50%;
+    background:  url('/images/pexels-rodnae-productions-8198677.jpg') no-repeat center center/100%;
+    min-height: 100%;
+}
+
+#home-info .info-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+
+#home-info .info-content p {
+    padding-bottom: 30px;
+}
+
+
+/* Picture gallery */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    
+  }
+
+  img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+  }
+
+
+/* Footer Section */
+.footer-distributed{
+	background-color: #2c292c;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left {
+    display: inline-flexbox;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed .footer-links{
+	color:  #fff;
+	margin: 20px 0 12px;
+}
+
+
+.footer-distributed .footer-links a{
+	display: block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-btn {
+    background: #333;
+    color: #fff;
+    float: right; 
+    position: relative; top: -30px; right: 10em;
+    }
+
+
+/* Footer */
+
+#main-footer {
+    text-align: center;
+    background-color: #FFF;
+    color: #444;
+    padding: 30px;
+
+}
+
+
+/* For mobile */
+
+@media only screen and (max-width: 768px) {
+    #navbar .logo {
+        float: none;
+        text-align: center;
+      }
+      
+      #navbar ul, #navbar ul li {
+        float: none;
+      }
+      
+      #navbar ul li a {
+        padding: 5px;
+        border-bottom: #444 dotted 1px;
+      }
+
+      /* Showcase */
+#showcase {
+    height: 100%;
+  }
+  
+  #showcase .showcase-content {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .footer-distributed .footer-left {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-btn {
+    align-items: center;
+    position: relative; right: 1px;
+  }
+}
+
