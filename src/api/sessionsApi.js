@@ -36,8 +36,8 @@ class SessionApi {
   }
 
   /* Post projects */
-  static async postProjects() {
-    await this.request("projects", {}, "post");
+  static async postProjects(data) {
+    await this.request("projects", data, "post");
   }
 
   /* Get all projects */
@@ -46,9 +46,15 @@ class SessionApi {
     return res.projects;
   }
 
+  /* Get projects by id */
+  static async getProjectsById(id) {
+    let res = await this.request(`projects/${id}`);
+    return res.projects;
+  }
+
   /* Submit proposal */
-  static async submitProposal(id, idProposal) {
-    await this.request(`projects/${id}/proposal/${idProposal}`, {}, "post");
+  static async submitProposal(id, data) {
+    await this.request(`projects/${id}/proposal`, data, "post");
   }
 
   /* Get token for login from username, and password */

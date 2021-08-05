@@ -34,10 +34,8 @@ function ProjectPost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await SessionApi.postProjects("projects", {
-        intialState,
-      });
-      formData(response);
+      await SessionApi.postProjects("projects", formData);
+
       history.push(`/projects`);
     } catch (err) {
       console.log(err);
@@ -45,9 +43,9 @@ function ProjectPost() {
   };
   return (
     <div className="container col-md-10 offset-md-3 col-lg-4 offset-lg-4">
-      <h3 className="mb-3" style={{ paddingTop: "2rem", alignItems: "center" }}>
+      {/* <h3 className="mb-3" style={{ paddingTop: "2rem", alignItems: "center" }}>
         Project Post Form
-      </h3>
+      </h3> */}
 
       <Card style={{ padding: "20px", paddingRight: "15px" }}>
         <div className="card-body">
