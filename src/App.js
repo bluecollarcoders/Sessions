@@ -8,6 +8,7 @@ import ProjectPost from "./components/ProjectPost";
 import PostProject from "./pages/PostProject";
 import DetailPage from "./pages/DetailPage";
 import { Projects } from "./pages/Projects";
+import Homepage from "./home/HomePage";
 import {
   ProjectsContext,
   ProjectsContextProvider,

@@ -9,6 +9,7 @@ const AddProposal = () => {
   console.log(location);
   const history = useHistory();
   console.log(id);
+  console.log(formData);
 
   const intialState = {
     producer_name: "",
