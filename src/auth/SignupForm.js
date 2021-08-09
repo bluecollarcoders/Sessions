@@ -8,8 +8,8 @@ function SignupForm({ signup }) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
   });
   const [formErrors, setFormErrors] = useState([]);
@@ -28,12 +28,11 @@ function SignupForm({ signup }) {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let token = await SessionApi.signup(formData);
-    if (token) {
-      SessionApi.token = token;
-      history.push("/projectspost");
+    let result = await signup(formData);
+    if (result.sucess) {
+      history.push("/projects/post");
     } else {
-      setformErrors([`unable to register`]);
+      setFormErrors([`unable to register`]);
     }
   }
 
@@ -73,18 +72,18 @@ function SignupForm({ signup }) {
               <div className="form-group">
                 <label>First Name</label>
                 <input
-                  name="firstName"
+                  name="first_name"
                   className="form-control"
-                  value={formData.firstName}
+                  value={formData.first_name}
                   onChange={handleChange}
                 />
 
                 <div className="form-group">
                   <label>Last name</label>
                   <input
-                    name="lastName"
+                    name="last_name"
                     className="form-control"
-                    value={formData.lastName}
+                    value={formData.last_name}
                     onChange={handleChange}
                   />
                 </div>

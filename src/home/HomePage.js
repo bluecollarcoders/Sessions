@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../auth/UserContext";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   const { currentUser } = useContext(UserContext);
@@ -18,13 +19,11 @@ const HomePage = () => {
               <p className="leads">QUALITY TALENT FOR INDIE ARTIST</p>
               {currentUser ? (
                 <h2>
-                  Welcom Back, {currentUser.firstname || currentUser.name}
+                  Welcome Back, {currentUser.firstname || currentUser.name}
                 </h2>
               ) : (
                 <p>
-                  <Link className="btn btn-dark" to="/login">
-                    Log in
-                  </Link>
+                  <br />
                   <Link className="btn btn-dark" to="/signup">
                     POST PROJECT
                   </Link>
@@ -45,9 +44,9 @@ const HomePage = () => {
             Producers find an artist whose project you can contribute too.
             Finding the right colloaboration has just become interest.
           </p>
-          <button href="#" className="btn btn-dark">
+          <Link to="/projects" className="btn btn-dark">
             View Projects
-          </button>
+          </Link>
         </div>
       </section>
       <section className="row">
@@ -60,21 +59,7 @@ const HomePage = () => {
           <img src="/images/pexels-starter-cam-4387718.jpg" />
         </div>
       </section>
-      <footer className="footer-distributed">
-        <div className="footer-left">
-          <p className="footer-links">
-            <a href="#">Login</a>
-            <a href="#">Signup</a>
-            <a href="#">Projects</a>
-          </p>
-          <p className="footer-company-name">SESSIONS </p>
-          <p />
-        </div>
-        <button className="btn btn-dark">Post Project</button>
-      </footer>
-      <footer id="main-footer">
-        <p>SESSIONS © 2021 all rights reserverd</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

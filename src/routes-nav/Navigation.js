@@ -9,18 +9,18 @@ function Navigation({ logout }) {
 
   const loggedInNav = () => {
     return (
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item mr-4">
+      <ul>
+        <li>
           <NavLink className="nav-link" to="/projects">
             Projects
           </NavLink>
         </li>
-        <li className="nav-item mr-4">
+        <li>
           <NavLink className="nav-link" to="/projectspost">
             ProjectPost
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li>
           <Link className="nav-link" to="/" onClick={logout}>
             Log out {currentUser.first_name || currentUser.username}
           </Link>
@@ -31,18 +31,18 @@ function Navigation({ logout }) {
 
   const loggedOutNav = () => {
     return (
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item mr-4">
+      <ul>
+        <li>
           <NavLink className="nav-link" to="/login">
             Login
           </NavLink>
         </li>
-        <li className="nav-item mr-4">
+        <li>
           <NavLink className="nav-link" to="/signup">
             Sign Up
           </NavLink>
         </li>
-        <li className="nav-item mr-4">
+        <li>
           <NavLink className="nav-link" to="/projects">
             Projects
           </NavLink>
@@ -52,10 +52,19 @@ function Navigation({ logout }) {
   };
 
   return (
-    <nav className="Navigation navbar navbar-expand-md">
-      <Link className="navbar-brand" to="/">
-        SESSIONS
-      </Link>
+    <nav id="navbar">
+      <h1 className="logo">
+        <Link
+          style={{
+            textDecoration: "none",
+            fontSize: "20px",
+          }}
+          to="/"
+        >
+          SESSIONS
+        </Link>
+      </h1>
+
       {currentUser ? loggedInNav() : loggedOutNav()}
     </nav>
   );

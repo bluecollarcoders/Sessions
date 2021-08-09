@@ -25,12 +25,11 @@ function LoginForm({ login }) {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let token = await SessionApi.login(formData);
-    if (token) {
-      SessionApi.token = token;
+    let result = await login(formData);
+    if (result.success) {
       history.push("/projectspost");
     } else {
-      setformErrors([`unable to login`]);
+      setformErrors(result.errors);
     }
   }
 

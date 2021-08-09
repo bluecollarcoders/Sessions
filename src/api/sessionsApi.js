@@ -1,4 +1,5 @@
 import axios from "axios";
+import SignupForm from "../auth/SignupForm";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000";
 
@@ -7,7 +8,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000";
 Static class tying together methods used to get/send to th API*/
 
 class SessionApi {
-  // the token for interactaction with the API will be stored here
+  // the token for interactive with the API will be stored here.
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
@@ -19,13 +20,12 @@ class SessionApi {
 
     try {
       return (await axios({ url, method, data, params, headers })).data;
-    } catch (e) {
-      console.error("API Error:", e.response);
-      let message = e.response.data.error.message;
+    } catch (err) {
+      console.error("API Error:", err.response);
+      let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     }
   }
-
   //   Indiviual API routes
 
   /* Get the current user. */
@@ -60,7 +60,7 @@ class SessionApi {
   /* Get token for login from username, and password */
 
   static async login(data) {
-    let res = await this.request(`auth/login`, data, "post");
+    let res = await this.request(`auth/token`, data, "post");
     return res.token;
   }
 

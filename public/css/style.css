@@ -114,6 +114,7 @@ p {
 #navbar h1{
     float: left;
     padding-top: 20px;
+    position: relative;left: 10px;
 }
 
 #navbar ul {
@@ -282,6 +283,7 @@ p {
     #navbar .logo {
         float: none;
         text-align: center;
+        position: relative;left: 15px;
       }
       
       #navbar ul, #navbar ul li {
