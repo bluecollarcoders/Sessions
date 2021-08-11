@@ -21,7 +21,11 @@ const DetailPage = () => {
     <div>
       {detail && (
         <React.Fragment>
-          <h1 className="text-center display-1" key={detail}>
+          <h1
+            style={{ paddingTop: "4rem", marginBottom: "5rem" }}
+            className="text-center display-1"
+            key={detail}
+          >
             {detail.project_name}
           </h1>
           <div className="mt-3">

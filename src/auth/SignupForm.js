@@ -24,7 +24,7 @@ function SignupForm({ signup }) {
     formErrors
   );
 
-  // Handle form submit: Calls Login prop and, if succesful, redirect to /companies
+  // Handle form submit: Calls Login prop and, if succesful, redirect to /projects/post
 
   async function handleSubmit(evt) {
     evt.preventDefault();
@@ -45,7 +45,12 @@ function SignupForm({ signup }) {
   return (
     <div className="SignupForm">
       <div className="container col-md-6 offset-md3 col-lg-4 offset-lg-4">
-        <h2 className="mb-3">Sign Up</h2>
+        <h2
+          style={{ paddingTop: "5rem", marginBottom: "5rem" }}
+          className="mb-3"
+        >
+          Sign Up
+        </h2>
         <div className="card">
           <div className="card-body">
             <form onSubmit={handleSubmit}>
@@ -107,6 +112,7 @@ function SignupForm({ signup }) {
                 type="submit"
                 className="btn btn-primary float-right"
                 onSubmit={handleSubmit}
+                style={{ margin: "2rem", marginLeft: "0rem" }}
               >
                 Submit
               </button>

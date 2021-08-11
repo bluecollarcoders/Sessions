@@ -27,7 +27,7 @@ function LoginForm({ login }) {
     evt.preventDefault();
     let result = await login(formData);
     if (result.success) {
-      history.push("/projectspost");
+      history.push("/projects/post");
     } else {
       setformErrors(result.errors);
     }
@@ -42,7 +42,9 @@ function LoginForm({ login }) {
   return (
     <div className="LoginForm">
       <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-        <h3 className="mb-3">Log In</h3>
+        <h3 style={{ paddingTop: "5rem" }} className="mb-3">
+          Log In
+        </h3>
 
         <div className="card">
           <div className="card-body">
@@ -76,6 +78,7 @@ function LoginForm({ login }) {
               ) : null}
 
               <button
+                style={{ marginTop: "2rem" }}
                 className="btn btn-primary float-right"
                 onSubmit={handleSubmit}
               >

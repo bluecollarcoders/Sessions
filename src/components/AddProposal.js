@@ -45,7 +45,7 @@ const AddProposal = () => {
   };
 
   return (
-    <div className="mb-2 container">
+    <div style={{ marginLeft: "7rem" }} className="mb-2 container">
       {errors.map((error) => {
         return <div>{error}</div>;
       })}
