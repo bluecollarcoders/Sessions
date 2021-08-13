@@ -23,7 +23,14 @@ const HomePage = () => {
                 </h2>
               ) : (
                 <p>
-                  <br />
+                  <Link
+                    to="/login"
+                    className="btn btn-dark"
+                    style={{ marginRight: "3rem" }}
+                  >
+                    LOG IN
+                  </Link>
+
                   <Link className="btn btn-dark" to="/signup">
                     POST PROJECT
                   </Link>
@@ -51,12 +58,24 @@ const HomePage = () => {
       </section>
       <section className="row">
         <div className="column">
-          <img src="/images/pexels-cottonbro-4088014.jpg" />
-          <img src="/images/pexels-kevin-bidwell-3925035.jpg" />
+          <img
+            src="/images/pexels-cottonbro-4088014.jpg"
+            alt="guitarist playing guitar"
+          />
+          <img
+            src="/images/pexels-kevin-bidwell-3925035.jpg"
+            alt="singer perfoming"
+          />
         </div>
         <div className="column">
-          <img src="/images/pexels-papa-yaw-2531728.jpg" />
-          <img src="/images/pexels-starter-cam-4387718.jpg" />
+          <img
+            src="/images/pexels-papa-yaw-2531728.jpg"
+            alt="studio headphones"
+          />
+          <img
+            src="/images/pexels-starter-cam-4387718.jpg"
+            alt="singer in studio"
+          />
         </div>
       </section>
       <Footer />
