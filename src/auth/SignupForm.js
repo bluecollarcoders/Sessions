@@ -112,7 +112,7 @@ function SignupForm({ signup }) {
                 type="submit"
                 className="btn btn-primary float-right"
                 onSubmit={handleSubmit}
-                style={{ margin: "2rem", marginLeft: "0rem" }}
+                style={{ margin: "3rem", marginLeft: "0rem" }}
               >
                 Submit
               </button>
