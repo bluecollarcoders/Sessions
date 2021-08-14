@@ -8,9 +8,12 @@ const Proposals = ({ proposals }) => {
           <div
             key={proposal.id}
             className="card text-white bg-primary mb-3 mr-4"
-            style={{ maxWidth: "30%" }}
+            style={{ maxWidth: "30%", marginLeft: "8rem" }}
           >
-            <div className="card-header d-flex justify-content-between">
+            <div
+              className="card-header d-flex justify-content-between"
+              style={{ fontSize: "20px", fontFamily: "sans-serif" }}
+            >
               <span>{proposal.producer_name}</span>
             </div>
             <div className="card-body">

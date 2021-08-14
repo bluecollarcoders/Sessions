@@ -1,5 +1,4 @@
 import axios from "axios";
-import SignupForm from "../auth/SignupForm";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000";
 

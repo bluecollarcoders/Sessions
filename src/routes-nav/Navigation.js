@@ -16,7 +16,7 @@ function Navigation({ logout }) {
           </NavLink>
         </li>
         <li>
-          <NavLink className="nav-link" to="/projectspost">
+          <NavLink className="nav-link" to="/projects/post">
             ProjectPost
           </NavLink>
         </li>

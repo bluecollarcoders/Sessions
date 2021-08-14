@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import SessionApi from "../api/sessionsApi";
 import Alert from "../common/Alert";
 
 function LoginForm({ login }) {
