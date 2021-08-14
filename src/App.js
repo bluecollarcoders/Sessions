@@ -85,6 +85,12 @@ const App = () => {
     try {
       let token = await SessionApi.signup(signupData);
       setToken(token);
+
+      let { username } = jwt.decode(token);
+      // put the token on the Api class so it can use it to call the API.
+      SessionApi.token = token;
+      let currentUser = await SessionApi.getCurrentUser(username);
+      setCurrentUser(currentUser);
       return { sucess: true };
     } catch (errors) {
       console.error("signup failed", errors);
@@ -100,6 +106,13 @@ const App = () => {
     try {
       let token = await SessionApi.login(loginData);
       setToken(token);
+
+      let { username } = jwt.decode(token);
+      // put the token on the Api class so it can use it to call the API.
+      SessionApi.token = token;
+      let currentUser = await SessionApi.getCurrentUser(username);
+      setCurrentUser(currentUser);
+
       return { success: true };
     } catch (errors) {
       console.error("login failed", errors);

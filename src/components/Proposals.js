@@ -11,10 +11,11 @@ const Proposals = ({ proposals }) => {
             style={{ maxWidth: "30%" }}
           >
             <div className="card-header d-flex justify-content-between">
-              <span>{proposal.name}</span>
+              <span>{proposal.producer_name}</span>
             </div>
             <div className="card-body">
-              <p className="card-text">{proposal.proposal}</p>
+              <p className="card-text">{proposal.proposal_details}</p>
+              <p className="card-text">{proposal.contact}</p>
             </div>
           </div>
         );

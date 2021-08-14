@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import SessionApi from "../api/sessionsApi";
 import {
   Col,
@@ -13,17 +13,20 @@ import {
 } from "reactstrap";
 
 function ProjectPost() {
+  const { id } = useParams();
   const history = useHistory();
   const intialState = {
     title: "",
-    projectName: "",
-    projectDescription: "",
-    musicLink: "",
+    project_name: "",
+    project_description: "",
+    music_link: "",
+    id: id,
   };
 
   const [formData, setFormData] = useState(intialState);
 
   const handleChange = (e) => {
+    console.log(formData);
     const { name, value } = e.target;
     setFormData((data) => ({
       ...data,
@@ -32,9 +35,10 @@ function ProjectPost() {
   };
 
   const handleSubmit = async (e) => {
+    console.log(handleSubmit);
     e.preventDefault();
     try {
-      await SessionApi.postProjects("projects", formData);
+      await SessionApi.postProjects(formData);
 
       history.push(`/projects`);
     } catch (err) {
@@ -70,9 +74,9 @@ function ProjectPost() {
                 <FormGroup>
                   <Label htmlFor="ProjectName">ProjectName</Label>
                   <Input
-                    id="projectName"
-                    name="projectName"
-                    value={formData.projectName}
+                    id="project_name"
+                    name="project_name"
+                    value={formData.project_name}
                     onChange={handleChange}
                     type="text"
                     className="form-control"
@@ -86,9 +90,9 @@ function ProjectPost() {
               <FormGroup>
                 <Label htmlFor="projectDescription">Project Description</Label>
                 <Input
-                  id="projectDescription"
-                  name="projectDescription"
-                  value={formData.projectDescription}
+                  id="project_description"
+                  name="project_description"
+                  value={formData.project_description}
                   onChange={handleChange}
                   type="text"
                   className="form-control"
@@ -101,9 +105,9 @@ function ProjectPost() {
               <FormGroup>
                 <Label htmlFor="musicLink">Music Link</Label>
                 <Input
-                  id="musicLink"
-                  name="musicLink"
-                  value={formData.musicLink}
+                  id="music_link"
+                  name="music_link"
+                  value={formData.music_link}
                   onChange={handleChange}
                   type="text"
                   className="form-control"

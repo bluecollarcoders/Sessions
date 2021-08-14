@@ -29,6 +29,7 @@ function SignupForm({ signup }) {
   async function handleSubmit(evt) {
     evt.preventDefault();
     let result = await signup(formData);
+    console.log(result);
     if (result.sucess) {
       history.push("/projects/post");
     } else {
