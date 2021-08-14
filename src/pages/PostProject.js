@@ -5,7 +5,10 @@ import ProjectPost from "../components/ProjectPost";
 export const PostProject = () => {
   return (
     <div>
-      <h1 className="font-weight-light display-1 text-center">
+      <h1
+        className="font-weight-light display-1 text-center"
+        style={{ marginTop: "4rem" }}
+      >
         Post A Project
       </h1>
 
