@@ -16,7 +16,7 @@ Sessions is an app that allows an artist (rapper or singer) to post a project. T
 * User(Singer or Rapper) clicks on post project this will redirect them to a signup form.
 * User will put in their information. Once form is completed they will be directed to a post project form.
 * They will complete the form and submit. 
-* The user is then directed to a list of all the project they just posted along with other projects. 
+* The user is then directed to  the project they just posted along with other projects. 
 * A producer can come to the site and click on the projects tab on the navigation bar and be directed to the project list without having to signup or login.
 * They then can click on a project. This will direct them to a form where they can submit a proposal to that specific project. 
 * Once the form is completed a proposal card will be assigned to that specific project. 
