@@ -27,7 +27,7 @@ function LoginForm({ login }) {
     let result = await login(formData);
     console.log(result);
     if (result.success) {
-      history.push("/projects/post");
+      history.push("/projects");
     } else {
       setformErrors(result.errors);
     }
