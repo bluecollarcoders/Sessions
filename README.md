@@ -6,6 +6,8 @@ The back-end for this project can be found [here:](https://github.com/bluecollar
 
 ![Sessions_homepage](https://user-images.githubusercontent.com/67053237/129505938-87c51627-fe4f-40c5-86e4-2d80ea76fc35.PNG)
 ![Sessions_projectlist](https://user-images.githubusercontent.com/67053237/129505918-dcacefb6-b240-4cea-9503-d9b2b88d699b.PNG)
+![Sessions_projectsproposal](https://user-images.githubusercontent.com/67053237/129508304-14f37f97-4d76-4370-84c6-4fb8703c3270.PNG)
+
 
 
 
