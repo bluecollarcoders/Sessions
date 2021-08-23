@@ -34,4 +34,4 @@ Sessions is an app that allows an artist (rapper or singer) to post a project. T
 * Express for the server(Backend)
 * Nodejs (Backend)
 * PostgreSQL for the Database
-* App is deployed on Heroku and can be found [here]()
+* App is deployed on Heroku and can be found [here](https://sessionsio.surge.sh/)
